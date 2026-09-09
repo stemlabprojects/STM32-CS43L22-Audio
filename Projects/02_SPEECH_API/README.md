@@ -1,4 +1,72 @@
+# STM32 CS43L22 Audio Projects
 
+This repository contains a collection of audio projects developed for the **STM32F407G-DISC1 / STM32F4-Discovery board** using the onboard **CS43L22 audio codec**.
+
+The projects are developed step-by-step, starting from a basic audio output test and progressing toward a reusable speech-generation API.
+
+---
+
+# 1. Repository
+
+GitHub repository:
+
+https://github.com/stemlabprojects/STM32-CS43L22-Audio
+
+Repository purpose:
+
+- Learn STM32 digital audio generation
+- Learn I2S audio transmission
+- Learn DMA-based continuous audio playback
+- Interface STM32F407 with the CS43L22 audio codec
+- Generate speech/audio from PCM data
+- Convert WAV audio files into C source files
+- Build a reusable speech API
+- Eventually use sensor values and other embedded data as spoken output
+
+---
+
+# 2. Hardware
+
+## Main Development Board
+
+**STM32F4-Discovery / STM32F407G-DISC1**
+
+Microcontroller:
+
+- STM32F407VGT6
+- ARM Cortex-M4
+- Floating Point Unit
+- 168 MHz maximum CPU frequency
+
+## Audio Codec
+
+**CS43L22**
+
+The STM32F4-Discovery board contains the CS43L22 audio codec.
+
+The codec is used to produce analog audio output through the board's audio output connector.
+
+---
+
+# 3. Audio Architecture
+
+The basic audio path used in these projects is:
+
+```text
+PCM Audio Data
+      |
+      v
+STM32F407
+      |
+      | I2S
+      v
+CS43L22 Audio Codec
+      |
+      v
+Analog Audio Output
+      |
+      v
+Headphone / Speaker
 
 ````markdown
 # STM32 CS43L22 Audio Projects
